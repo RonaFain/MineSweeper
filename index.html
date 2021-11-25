@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body onload="initGame()">
+    <h1>MineSweeper</h1>
+    <div class="score-container">
+      The best score is: <span class="score">0</span> points
+    </div>
+    <div class="details">
+      <div class="lifes-container"> <span class="life"></span></div>
+      <div class="safe-container"></div>
+      <div class="hint-container"></div>
+    </div>
+    <div class="list-level">
+      <label>Pick a level:</label>
+      <select class="levels" onchange="setLevelGame()">
+        <option value="Beginner">Beginner</option>
+        <option value="Medium">Medium</option>
+        <option value="expert">Expert</option>
+      </select>
+    </div>
+    <div class="flex-container">
+      <div class="status border-color">
+        <div class="num-mines border-color">🚩 </div>
+        <button class="restart border-color" onclick="restart()">😀</button>
+        <div class="timer border-color">000</div>
+      </div>
+      <div class="board-container"></div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-content">
+        <span class="closeModal">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+    <div class="footer">© 2021 Rona Fainshtein</div>
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

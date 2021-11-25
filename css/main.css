@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightsteelblue;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  margin: 0;
+}
+
+table {
+  background-color: lightgray;
+  width: 500px;
+  height: 500px;
+}
+
+td {
+  background-color: #c0c0c0;
+  border: 1.5px solid;
+  border-top-color: #ffffff;
+  border-right-color: #7b7b7b;
+  border-bottom-color: #7b7b7b;
+  border-left-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.safe-container button {
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: #008cba;
+  color: white;
+}
+
+.score-container {
+  margin: 20px;
+  font-size: 18px;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.flex-container {
+  justify-content: center;
+  margin-left: 30%;
+  margin-bottom: 50px;
+}
+
+.status {
+  background-color: lightgray;
+  font-family: 'MS Sans Serif';
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content:right;
+  padding: 5px;
+  margin: 10px 40px;
+  width: 500px;
+  height: 50px;
+}
+
+.board-container {
+  margin-left: 40px;
+}
+
+.details {
+  background-color: black;
+  width: 500px;
+  margin: auto;
+}
+.lifes-container {
+  float: left;
+  width: 200px;
+  min-height: 1px;
+  min-width: 200px;
+}
+.safe-container {
+  float: left;
+  width: 100px;
+  pointer-events: none;
+}
+.hint-container {
+  float: left;
+  width: 200px;
+  margin-top: 13px;
+}
+
+.life {
+  color: rgb(243, 94, 116);
+  font-size: 36px;
+}
+
+.hint {
+  font-size: 22px;
+  margin-left: 15px;
+}
+
+.hint:hover {
+  cursor: pointer;
+  box-shadow: -1px 0px 13px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.list-level {
+  font-size: 18px;
+  display: inline-block;
+  width: 15%;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  margin-right: 100px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: rgba(255, 255, 255, 0.651);
+}
+
+.levels {
+  width: 100%;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: medium;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.shown {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #c0c0c0;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+}
+
+.pressed {
+  background-color: red;
+  pointer-events: none;
+}
+
+.num-mines,
+.restart,
+.timer {
+  width: 40px;
+  height: 40px;
+  font-size: 17px;
+  border: 2px solid black;
+  padding: 7px 6px;
+  border-radius: 12px;
+}
+
+.num-mines {
+  font-family: inherit;
+  width: 100px;
+  margin-right: 140px;
+  background-color: rgba(56, 204, 142, 0.315);
+}
+
+.restart {
+  margin-right: 190px;
+}
+
+.restart:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.border-color {
+  border-top-color: #ffffff;
+  border-right-color: #7b7b7b;
+  border-bottom-color: #7b7b7b;
+  border-left-color: #ffffff;
+}
+
+.safe {
+  border: 2px solid darkslateblue;
+  box-shadow: 1px -1px 5px 5px rgba(33, 96, 180, 0.42);
+}
+
+.disable-click {
+  pointer-events: none;
+  background-color: rgba(47, 79, 79, 0.808);
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.closeModal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: darkblue;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
